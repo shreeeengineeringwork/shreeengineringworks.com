@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://shreeeengineeringwork.github.io/shreeengineringworks.com/sitemap.xml
