@@ -372,5 +372,37 @@
 
         document.addEventListener('DOMContentLoaded', renderBrands);
     </script>
+
+    <script>
+    // 1. Disable Right-Click
+    document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+    // 2. Disable Keyboard Shortcuts
+    document.onkeydown = function (e) {
+        // Disable F12 (Developer Tools)
+        if (e.keyCode === 123) {
+            return false;
+        }
+
+        // Disable Ctrl+Shift+I (Inspect), Ctrl+Shift+J (Console), Ctrl+U (Source)
+        if (e.ctrlKey && (e.shiftKey && (e.keyCode === 73 || e.keyCode === 74) || e.keyCode === 85)) {
+            return false;
+        }
+
+        // Disable Ctrl+S (Save) and Ctrl+P (Print)
+        if (e.ctrlKey && (e.keyCode === 83 || e.keyCode === 80)) {
+            return false;
+        }
+    };
+
+    // 3. Optional: Alert Message (Not recommended as it annoys users)
+    /*
+    document.addEventListener('contextmenu', (e) => {
+        e.preventDefault();
+        alert("Right-click is disabled for security reasons.");
+    });
+    */
+</script>
 </body>
 </html>
+
