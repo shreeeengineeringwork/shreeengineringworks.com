@@ -434,77 +434,94 @@
     });
     */
 </script>
+<div class="fixed-contact-wrapper">
+    <a href="tel:+919922948303" class="contact-float call-float" title="Call Us Now">
+        <i class="fas fa-phone-alt"></i>
+        <span class="tooltip-text">Call Us</span>
+    </a>
+
     <a href="https://wa.me/919922948303?text=Hello%20Shree%20Engineering%20Works,%20I%20am%20interested%20in%20your%20services." 
-   class="whatsapp-float" 
-   target="_blank" 
-   rel="noopener noreferrer"
-   title="Chat with us on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-    <span class="tooltip-text">Chat with us</span>
-</a>
+       class="contact-float whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       title="WhatsApp Us">
+        <i class="fab fa-whatsapp"></i>
+        <span class="tooltip-text">WhatsApp Us</span>
+    </a>
+</div>
 
 <style>
-    /* WhatsApp Float Styling */
-    .whatsapp-float {
+    /* Wrapper to stack buttons */
+    .fixed-contact-wrapper {
         position: fixed;
-        width: 60px;
-        height: 60px;
-        bottom: 40px;
-        right: 40px;
-        background-color: #25d366;
+        bottom: 30px;
+        right: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        z-index: 1000;
+    }
+
+    /* Common Floating Styles */
+    .contact-float {
+        width: 55px;
+        height: 55px;
         color: #FFF;
         border-radius: 50px;
         text-align: center;
-        font-size: 35px;
-        box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
-        z-index: 100;
+        font-size: 24px;
+        box-shadow: 0px 8px 20px rgba(0,0,0,0.3);
         display: flex;
         align-items: center;
         justify-content: center;
         transition: all 0.3s ease;
         text-decoration: none;
+        position: relative;
     }
 
-    .whatsapp-float:hover {
-        transform: scale(1.1);
-        background-color: #128c7e;
-        color: #FFF;
+    .contact-float:hover {
+        transform: scale(1.1) translateY(-3px);
     }
+
+    /* Specific Colors */
+    .whatsapp-float { background-color: #25d366; }
+    .whatsapp-float:hover { background-color: #128c7e; }
+
+    .call-float { background-color: #1e40af; } /* Professional Dark Blue */
+    .call-float:hover { background-color: #1e3a8a; }
 
     /* Tooltip styling */
     .tooltip-text {
         visibility: hidden;
-        width: 120px;
-        background-color: #333;
+        width: 100px;
+        background-color: #1f2937;
         color: #fff;
         text-align: center;
         border-radius: 6px;
         padding: 5px 0;
         position: absolute;
-        z-index: 1;
         right: 125%; 
-        font-size: 14px;
+        font-size: 12px;
+        font-weight: bold;
         opacity: 0;
         transition: opacity 0.3s;
+        pointer-events: none;
+        white-space: nowrap;
     }
 
-    .whatsapp-float:hover .tooltip-text {
+    .contact-float:hover .tooltip-text {
         visibility: visible;
         opacity: 1;
     }
 
-    /* Mobile responsiveness */
-    @media screen and (max-width: 768px) {
-        .whatsapp-float {
-            width: 50px;
-            height: 50px;
-            bottom: 20px;
-            right: 20px;
-            font-size: 30px;
-        }
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+        .fixed-contact-wrapper { bottom: 20px; right: 20px; gap: 10px; }
+        .contact-float { width: 50px; height: 50px; font-size: 20px; }
     }
 </style>
 </body>
 </html>
+
 
 
