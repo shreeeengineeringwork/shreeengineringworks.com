@@ -377,6 +377,385 @@
         alert("Right-click is disabled for security reasons.");
     });
     */
+</script><!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Mahindra Portfolio | Shree Engineering Works</title>
+     <meta name="description" content="Certified fabrication company in Shirwal, Satara. Specializing in load body fabrication, container bodies, industrial blowers, and powder coating.">
+    <meta name="keywords" content="fabrication in Shirwal, truck body Satara, industrial fabrication Pune, Shree Engineering Works, load body maker">
+    <meta name="author" content="Shree Engineering Works">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.shreeengineeringworks.in/">
+    <meta property="og:title" content="Shree Engineering Works | Fabrication Excellence">
+    <meta property="og:description" content="Quality industrial fabrication and auto body work since 2012.">
+    <meta property="og:image" content="images/logo/shree_logo.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        /* Custom Animations */
+        @keyframes driveIn {
+            0% { transform: translateX(100vw); }
+            100% { transform: translateX(0); }
+        }
+
+        @keyframes fadeInNavItem {
+            0% { opacity: 0; transform: translateY(-10px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .drive-in { animation: driveIn 2s ease-out forwards; }
+        
+        .nav-item { 
+            opacity: 0; 
+            animation: fadeInNavItem 0.5s ease forwards; 
+        }
+
+        /* Mobile Menu Transition */
+        #mobile-menu.hidden { display: none; }
+        #mobile-menu.active { display: flex; }
+
+        /* Carousel & Gallery Styling */
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .carousel-item.active { position: relative; }
+        .carousel-item.active::after {
+            content: 'VIEWING'; position: absolute; bottom: -12px; left: 50%; transform: translateX(-50%);
+            font-size: 8px; font-weight: 900; color: #ef4444; background: white;
+            padding: 2px 8px; border-radius: 4px; border: 1px solid #e0e7ff; box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .thumb-img { transition: all 0.2s ease; cursor: pointer; border: 2px solid transparent; opacity: 0.5; }
+        .thumb-img.active { border-color: #ef4444; transform: scale(1.05); opacity: 1; }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Shree Engineering Works",
+      "image": "images/logo/shree_logo.png",
+      "telephone": "+919922948303",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Gat no. 326, Opp. Star City, Pandharpur Phata",
+        "addressLocality": "Shirwal",
+        "addressRegion": "Maharashtra",
+        "postalCode": "412801",
+        "addressCountry": "IN"
+      }
+    }
+    </script>
+
+
+</head>
+
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+    <header class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-sm shadow-sm px-6 py-3">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="index.html" class="overflow-hidden">
+                <img src="images/logo/shree_logo.png" alt="Logo" class="h-12 drive-in" id="logo" />
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold uppercase tracking-wide">
+                <a href="index.html#home" class="nav-item hover:text-red-600 transition" style="animation-delay: 0.5s">Home</a>
+                <a href="index.html#about" class="nav-item hover:text-red-600 transition" style="animation-delay: 0.7s">About</a>
+                <a href="index.html#services" class="nav-item hover:text-red-600 transition" style="animation-delay: 0.9s">Services</a>
+                <a href="index.html#portfolio" class="nav-item hover:text-red-600 transition" style="animation-delay: 1.1s">Portfolio</a>
+                <a href="index.html#testimonials" class="nav-item hover:text-red-600 transition" style="animation-delay: 1.1s">Testimonials</a>
+                <a href="index.html#contact" class="nav-item hover:text-red-600 transition" style="animation-delay: 1.3s">Contact</a>
+                <a href="index.html#contact" class="nav-item bg-red-600 text-white px-5 py-2 rounded-full hover:bg-red-700 transition" style="animation-delay: 1.5s">Get Quote</a>
+            </nav>
+
+            <button id="mobile-menu-btn" class="md:hidden text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <nav id="mobile-menu" class="hidden flex-col bg-white absolute top-full left-0 w-full p-6 space-y-4 shadow-xl border-t md:hidden">
+            <a href="index.html#home" class="mobile-link font-medium">Home</a>
+            <a href="index.html#about" class="mobile-link font-medium">About</a>
+            <a href="index.html#services" class="mobile-link font-medium">Services</a>
+            <a href="index.html#portfolio" class="mobile-link font-medium">Portfolio</a>
+            <a href="index.html#testimonials" class="mobile-link font-medium">Testimonials</a>
+            <a href="index.html#contact" class="bg-indigo-600 text-white px-4 py-2 rounded text-center">Get a Quote</a>
+        </nav>
+    </header>
+
+    <section class="mt-24 bg-gray-50/50 border-b border-gray-100 py-10 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="h-px bg-gray-200 flex-grow"></div>
+                <h2 class="text-[10px] font-black uppercase tracking-[0.4em] text-red-600">Browse Manufacturers</h2>
+                <div class="h-px bg-gray-200 flex-grow"></div>
+            </div>
+            <div id="logo-carousel" class="flex items-center gap-6 overflow-x-auto pb-4 scrollbar-hide md:justify-center">
+                </div>
+        </div>
+    </section>
+
+    <main class="max-w-7xl mx-auto px-6 py-16">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+            <div class="max-w-2xl">
+                <h1 class="text-5xl md:text-8xl font-black text-gray-900 leading-none uppercase mb-6 tracking-tighter">
+                   Eicher <span class="text-red-600">Trucks</span>
+                </h1>
+                <p class="text-gray-500 text-lg md:text-xl font-medium leading-relaxed">
+                    High-efficiency body fabrication for Eicher’s Pro series. From 10-ton load bodies to specialized container solutions designed for maximum payload.
+                </p>
+                </p>
+            </div>
+            <div class="bg-red-600 text-white p-8 rounded-[2rem] shadow-xl shadow-red-100 hidden lg:block">
+                <p class="text-[10px] font-black uppercase tracking-[0.3em] opacity-80 mb-2">Projects Delivered</p>
+                <p class="text-4xl font-black">78+ <span class="text-xl opacity-60 font-medium">Units</span></p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div onclick="openGallery(1, 'Eicher Chassi Hytech Body')" class="group cursor-pointer">
+                <div class="relative aspect-[4/3] overflow-hidden rounded-[2.5rem] bg-gray-100 shadow-sm transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+                    <img src="images/Truck_images/Eicher/chassi_HYTECH_BODY/1.webp" alt="Eicher Chassi Hytech Body" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-red-900/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="bg-white text-gray-900 px-6 py-2 rounded-full font-bold text-[10px] uppercase tracking-widest">View Project</span>
+                    </div>
+
+                </div>
+                <div class="mt-6 px-2">
+                    <h3 class="text-xl font-black text-gray-900 uppercase">Eicher Chassi Hytech Body</h3>
+                    <p class="text-red-600 font-bold text-[10px] uppercase tracking-widest">Industrial Load Body • 7 Photos</p>
+                </div>
+            </div>
+
+            <div onclick="openGallery(2, 'Eicher Container')" class="group cursor-pointer">
+                <div class="relative aspect-[4/3] overflow-hidden rounded-[2.5rem] bg-gray-100 shadow-sm transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+                    <img src="images/Truck_images/Eicher/container/1.webp" alt="Eicher Container" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-red-900/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="bg-white text-gray-900 px-6 py-2 rounded-full font-bold text-[10px] uppercase tracking-widest">View Project</span>
+                    </div>
+                </div>
+                <div class="mt-6 px-2">
+                    <h3 class="text-xl font-black text-gray-900 uppercase">Eicher Container</h3>
+                    <p class="text-red-600 font-bold text-[10px] uppercase tracking-widest">Industrial Load Body • 7 Photos</p>
+                </div>
+            </div>
+
+            <div onclick="openGallery(3, 'Eicher Container Hytech Body')" class="group cursor-pointer">
+                <div class="relative aspect-[4/3] overflow-hidden rounded-[2.5rem] bg-gray-100 shadow-sm transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+                    <img src="images/Truck_images/Eicher/hyteh_body/1.webp" alt="Eicher Container Hytech Body" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-red-900/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="bg-white text-gray-900 px-6 py-2 rounded-full font-bold text-[10px] uppercase tracking-widest">View Project</span>
+                    </div>
+                </div>
+                <div class="mt-6 px-2">
+                    <h3 class="text-xl font-black text-gray-900 uppercase">Eicher Container Hytech Body</h3>
+                    <p class="text-red-600 font-bold text-[10px] uppercase tracking-widest">Industrial Load Body • 5 Photos</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <div id="galleryBackdrop" class="fixed inset-0 bg-gray-900/90 backdrop-blur-md hidden z-[60]" onclick="closeGallery()"></div>
+    <div id="galleryModal" class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[70] bg-white rounded-[2rem] shadow-2xl w-[90vw] max-w-2xl hidden flex flex-col overflow-hidden border border-gray-100">
+        <div class="flex items-center justify-between px-6 py-4 border-b border-gray-50">
+            <div>
+                <h3 id="galleryTitle" class="text-base font-black text-gray-900 uppercase tracking-tight">Project View</h3>
+                <p class="text-[9px] font-bold text-red-600 uppercase tracking-widest">Shree Engineering Works</p>
+            </div>
+            <button onclick="closeGallery()" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-50 hover:bg-red-50 hover:text-red-600 transition-all">
+                <i class="fas fa-times text-sm"></i>
+            </button>
+        </div>
+        <div class="relative bg-gray-50 flex items-center justify-center h-[300px] md:h-[450px] p-4">
+            <button onclick="prevImage()" class="absolute left-4 w-10 h-10 flex items-center justify-center bg-white/90 shadow rounded-full z-10 hover:bg-red-600 hover:text-white transition-all"><i class="fas fa-chevron-left text-xs"></i></button>
+            <img id="galleryImage" src="" class="max-h-full max-w-full object-contain rounded-xl shadow-md transition-opacity duration-300">
+            <button onclick="nextImage()" class="absolute right-4 w-10 h-10 flex items-center justify-center bg-white/90 shadow rounded-full z-10 hover:bg-red-600 hover:text-white transition-all"><i class="fas fa-chevron-right text-xs"></i></button>
+        </div>
+        <div class="p-4 bg-white">
+            <div id="galleryThumbnails" class="flex justify-center gap-2 overflow-x-auto pb-1 scrollbar-hide"></div>
+        </div>
+    </div>
+
+    <footer class="bg-[#0f172a] text-gray-400 pt-20 pb-10 px-6 font-sans">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            
+            <div class="space-y-6">
+                <img src="images/logo/shree_logo.png" alt="Shree Engineering Works" class="h-14 brightness-0 invert">
+                <p class="text-sm leading-relaxed">
+                    Leading the way in premium truck body fabrication since [Year]. We combine heavy-duty engineering with precision craftsmanship to build bodies that last a lifetime.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-red-600 hover:text-white transition-all"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-red-600 hover:text-white transition-all"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-red-600 hover:text-white transition-all"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-widest text-sm mb-8 border-l-4 border-red-600 pl-4">Navigation</h4>
+                <ul class="space-y-4 text-sm">
+                    <li><a href="index.html#home" class="hover:text-red-500 transition-colors">Home</a></li>
+                    <li><a href="index.html#about" class="hover:text-red-500 transition-colors">About Us</a></li>
+                    <li><a href="index.html#portfolio" class="hover:text-red-500 transition-colors">Our Portfolio</a></li>
+                    <li><a href="index.html#services" class="hover:text-red-500 transition-colors">Fabrication Services</a></li>
+                    <li><a href="index.html#contact" class="hover:text-red-500 transition-colors">Contact Support</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-widest text-sm mb-8 border-l-4 border-red-600 pl-4">Fabrication</h4>
+                <ul class="space-y-4 text-sm">
+                    <li><a href="TATA_portfolio.html" class="hover:text-red-500 transition-colors">Tata Motors Bodies</a></li>
+                    <li><a href="Mahindra_portfolio.html" class="hover:text-red-500 transition-colors">Mahindra Pickup Bodies</a></li>
+                    <li><a href="Eicher_portfolio.html" class="hover:text-red-500 transition-colors">Eicher Pro Series</a></li>
+                    <li><a href="#" class="hover:text-red-500 transition-colors">Custom Tipper Design</a></li>
+                    <li><a href="#" class="hover:text-red-500 transition-colors">Container Fabrication</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-widest text-sm mb-8 border-l-4 border-red-600 pl-4">Visit Us</h4>
+                <ul class="space-y-4 text-sm">
+                    <li class="flex items-start gap-4">
+                        <i class="fas fa-map-marker-alt text-red-600 mt-1"></i>
+                        <span>Gat No.378, Shirwal-Lonand Road,<br>Shirwal, Satara, Maharashtra 412801</span>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <i class="fas fa-phone-alt text-red-600"></i>
+                        <a href="tel:+919876543210" class="hover:text-white transition-colors">+91 98765 43210</a>
+                    </li>
+                    <li class="flex items-center gap-4">
+                        <i class="fas fa-envelope text-red-600"></i>
+                        <a href="mailto:info@shreeengineering.com" class="hover:text-white transition-colors">info@shreeengineering.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-xs">
+                &copy; 2025 <span class="text-white font-bold">Shree Engineering Works</span>. All rights reserved.
+            </p>
+            <div class="flex gap-6 text-xs uppercase tracking-tighter">
+                <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition">Terms of Service</a>
+                <span class="text-gray-600">shree engineering works</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        // Brand Carousel Injected Data
+        const brands = [
+            { name: "Bharat Benz", img: "asset/Company_Logo/BharatBenz-Logo-PNG1.png", link: "Bharat_benz.html" },
+            { name: "Eicher", img: "asset/Company_Logo/eicher-logo.svg", link: "Eicher_portfolio.html" },
+            { name: "Mahindra", img: "asset/Company_Logo/mahindra-mahindra-logo.svg", link: "Mahindra_portfolio.html" },
+            { name: "TATA", img: "asset/Company_Logo/tata-logo.svg", link: "TATA_portfolio.html" },
+            { name: "Ashok Leyland", img: "asset/Company_Logo/ashok-leyland-logo-2.svg", link: "AshokLeyland_portfoilio.html" },
+            { name: "Maruti", img: "asset/Company_Logo/suzuki-7.svg", link: "Maruti_portfolio.html" }
+        ];
+
+        function renderBrands() {
+            const carousel = document.getElementById('logo-carousel');
+            carousel.innerHTML = brands.map(b => `
+                <a href="${b.link}" class="carousel-item p-4 bg-white rounded-xl border w-32 h-20 flex items-center justify-center shrink-0 transition-all ${b.name === 'Eicher' ? 'active border-red-600 opacity-100 grayscale-0' : 'grayscale opacity-50'}">
+                    <img src="${b.img}" alt="${b.name}" class="max-h-full object-contain">
+                </a>
+            `).join('');
+        }
+
+        // Mobile Menu
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('active');
+            menuBtn.querySelector('i').classList.toggle('fa-bars');
+            menuBtn.querySelector('i').classList.toggle('fa-times');
+        });
+
+        // Gallery System
+        const galleryData = {
+            1: ["images/Truck_images/Eicher/chassi_HYTECH_BODY/1.webp","images/Truck_images/Eicher/chassi_HYTECH_BODY/2.webp","images/Truck_images/Eicher/chassi_HYTECH_BODY/3.webp","images/Truck_images/Eicher/chassi_HYTECH_BODY/4.webp","images/Truck_images/Eicher/chassi_HYTECH_BODY/5.webp","images/Truck_images/Eicher/chassi_HYTECH_BODY/6.webp","images/Truck_images/Eicher/chassi_HYTECH_BODY/7.webp"],
+            2: ["images/Truck_images/Eicher/container/1.webp","images/Truck_images/Eicher/container/2.webp","images/Truck_images/Eicher/container/3.webp","images/Truck_images/Eicher/container/4.webp","images/Truck_images/Eicher/container/5.webp","images/Truck_images/Eicher/container/6.webp","images/Truck_images/Eicher/container/7.webp"],
+            3: ["images/Truck_images/Eicher/hyteh_body/1.webp","images/Truck_images/Eicher/hyteh_body/2.webp","images/Truck_images/Eicher/hyteh_body/3.webp","images/Truck_images/Eicher/hyteh_body/4.webp","images/Truck_images/Eicher/hyteh_body/5.webp"]
+        };
+
+        let currentSet = [], currentIdx = 0;
+        const modal = document.getElementById('galleryModal');
+        const backdrop = document.getElementById('galleryBackdrop');
+        const mainImg = document.getElementById('galleryImage');
+        const thumbCont = document.getElementById('galleryThumbnails');
+
+        function openGallery(key, title) {
+            currentSet = galleryData[key];
+            currentIdx = 0;
+            document.getElementById('galleryTitle').textContent = title;
+            modal.classList.remove('hidden');
+            backdrop.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            updateGalleryUI();
+        }
+
+        function updateGalleryUI() {
+            mainImg.style.opacity = '0';
+            setTimeout(() => {
+                mainImg.src = currentSet[currentIdx];
+                mainImg.style.opacity = '1';
+            }, 100);
+            thumbCont.innerHTML = currentSet.map((src, i) => `
+                <img src="${src}" onclick="currentIdx=${i};updateGalleryUI()" class="h-10 w-14 rounded border-2 object-cover thumb-img ${i === currentIdx ? 'active' : ''}">
+            `).join('');
+        }
+
+        function nextImage() { currentIdx = (currentIdx + 1) % currentSet.length; updateGalleryUI(); }
+        function prevImage() { currentIdx = (currentIdx - 1 + currentSet.length) % currentSet.length; updateGalleryUI(); }
+        function closeGallery() { modal.classList.add('hidden'); backdrop.classList.add('hidden'); document.body.style.overflow = 'auto'; }
+
+        document.addEventListener('DOMContentLoaded', renderBrands);
+    </script>
+
+    <script>
+    // 1. Disable Right-Click
+    document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+    // 2. Disable Keyboard Shortcuts
+    document.onkeydown = function (e) {
+        // Disable F12 (Developer Tools)
+        if (e.keyCode === 123) {
+            return false;
+        }
+
+        // Disable Ctrl+Shift+I (Inspect), Ctrl+Shift+J (Console), Ctrl+U (Source)
+        if (e.ctrlKey && (e.shiftKey && (e.keyCode === 73 || e.keyCode === 74) || e.keyCode === 85)) {
+            return false;
+        }
+
+        // Disable Ctrl+S (Save) and Ctrl+P (Print)
+        if (e.ctrlKey && (e.keyCode === 83 || e.keyCode === 80)) {
+            return false;
+        }
+    };
+
+    // 3. Optional: Alert Message (Not recommended as it annoys users)
+    /*
+    document.addEventListener('contextmenu', (e) => {
+        e.preventDefault();
+        alert("Right-click is disabled for security reasons.");
+    });
+    */
 </script>
     <a href="https://wa.me/919922948303?text=Hello%20Shree%20Engineering%20Works,%20I%20am%20interested%20in%20your%20services." 
    class="whatsapp-float" 
@@ -450,5 +829,10 @@
 </style>
 </body>
 </html>
+
+
+</body>
+</html>
+
 
 
